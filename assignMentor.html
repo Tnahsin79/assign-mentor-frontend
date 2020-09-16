@@ -13,14 +13,14 @@
                 <div class="col col-6"><label for="name" style="font-size: 20px;">Mentor id</label></div>
                 <div class="col col-6">
                     <label id="icon" for="name"><i class="fa">&#xf007;</i></label>
-                    <input type="text" name="name" id="name" placeholder="mentor id" required/>
+                    <input type="text" name="name" id="mentorname" placeholder="mentor id" required/>
                 </div>
             </div>
             <div class="row">
                 <div class="col col-6"><label for="name" style="font-size: 20px;">Student id</label></div>
                 <div class="col col-6">
                     <label id="icon" for="name"><i class="fa">&#xf007;</i></label>
-                    <input type="text" name="name" id="name" placeholder="student id" required/>
+                    <input type="text" name="name" id="studentname" placeholder="student id" required/>
                 </div>
             </div>
             <div class="row">
@@ -34,8 +34,18 @@
             let AssignData;
             try
             {
-                let assignfetch=await fetch("");
-                assignData=await assignfetch.json();
+                var data={
+                    sid:document.getElementById("studentname").value,
+                    mid:document.getElementById("mentorname").value
+                }
+                await fetch("http://localhost:3000/assign",{
+                    method:"PUT",
+                    body:JSON.stringify(data),
+                    headers:{
+                        "Content-Type":"application/json"
+                    }
+                });
+                alert("Data sent");
             }
             catch(error)
             {
