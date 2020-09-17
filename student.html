@@ -72,10 +72,12 @@
                     var id=document.createElement("td");
                     id.innerText=studentData[i]._id;
                     var name=document.createElement("td");
-                    id.innerText=studentData[i].name;
+                    name.innerText=studentData[i].name;
                     var mentor=document.createElement("td");
-                    id.innerText=studentData[i].mentor.name;
-                    row.appendChild(id,name,mentor);
+                    mentor.innerText=studentData[i].mentor.name;
+                    row.appendChild(id);
+                    row.appendChild(name);
+                    row.appendChild(mentor);
                     document.getElementById("studentInfo").appendChild(row);
                 }
             }
