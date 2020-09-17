@@ -67,6 +67,7 @@
                 //document.getElementById("data").innerHTML=mentorData;
                 for(let i=0;i<mentorData.length;i++)
                 {
+                    var stuArray=[];
                     var row=document.createElement("tr");
                     var id=document.createElement("td");
                     id.innerText=mentorData[i]["_id"];
@@ -74,7 +75,11 @@
                     name.innerText=mentorData[i]["name"];
                     var mentor=document.createElement("td");
                     if(mentorData[i].students!==undefined)
-                    mentor.innerText=JSON.stringify(mentorData[i]["students"]);
+                    {
+                        for(let j=0;j<mentorData[i].students.length;j++)
+                        stuArray.push(mentorData[i].students[j])
+                        mentor.innerText=stuArray;
+                    }
                     else
                     mentor.innerText="N/A";
                     row.appendChild(id);
