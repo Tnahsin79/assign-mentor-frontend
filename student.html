@@ -70,11 +70,11 @@
                 {
                     var row=document.createElement("tr");
                     var id=document.createElement("td");
-                    id.innerText=studentData[i]._id;
+                    id.innerText=studentData[i]["_id"];
                     var name=document.createElement("td");
-                    name.innerText=studentData[i].name;
+                    name.innerText=studentData[i]["name"];
                     var mentor=document.createElement("td");
-                    mentor.innerText=studentData[i].mentor.name;
+                    mentor.innerText=studentData[i]["mentor"]["name"];
                     row.appendChild(id);
                     row.appendChild(name);
                     row.appendChild(mentor);
