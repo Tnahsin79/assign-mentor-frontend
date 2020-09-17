@@ -30,13 +30,14 @@
                 var data={
                     name:document.getElementById("name").value
                 }
-                await fetch("https://assign-mentor.herokuapp.com/student",{
+                let temp=await fetch("https://assign-mentor.herokuapp.com/student",{
                     method:"POST",
                     body:JSON.stringify(data),
                     headers:{
                         "Content-Type":"application/json"
                     }
                 });
+                console.log(temp);
                 alert("Data sent");
             }
             catch(error)
