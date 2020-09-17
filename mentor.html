@@ -78,7 +78,7 @@
                     {
                         for(let j=0;j<mentorData[i].students.length;j++)
                         stuArray.push(mentorData[i].students[j].name);
-                        mentor.innerText=stuArray;
+                        mentor.innerText=stuArray.join(" , ");
                     }
                     else
                     mentor.innerText="N/A";
