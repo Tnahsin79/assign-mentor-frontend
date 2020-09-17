@@ -52,6 +52,7 @@
             {
                 let mentorfetch=await fetch("https://assign-mentor.herokuapp.com/mentors");
                 mentorData=await mentorfetch.json();
+                mentorData=JSON.stringify(mentorData);
                 document.getElementById("data").innerHTML=mentorData;
             }
             catch(error)
