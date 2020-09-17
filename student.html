@@ -64,7 +64,7 @@
             {
                 let studentfetch=await fetch("https://assign-mentor.herokuapp.com/students"); 
                 studentData=await studentfetch.json();
-                studentData=JSON.stringify(studentData);
+                //studentData=JSON.stringify(studentData);
                 document.getElementById("data").innerHTML=studentData;
                 for(let i=0;i<studentData.length;i++)
                 {
