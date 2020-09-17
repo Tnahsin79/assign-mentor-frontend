@@ -73,8 +73,8 @@
                     var name=document.createElement("td");
                     name.innerText=mentorData[i]["name"];
                     var mentor=document.createElement("td");
-                    if(mentorData[i].mentor!==undefined)
-                    mentor.innerText=mentorData[i]["students"];
+                    if(mentorData[i].students!==undefined)
+                    mentor.innerText=JSON.stringify(mentorData[i]["students"]);
                     else
                     mentor.innerText="N/A";
                     row.appendChild(id);
