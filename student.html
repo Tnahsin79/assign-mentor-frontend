@@ -26,7 +26,7 @@
         <div class="container-fluid">
             <table id="studentInfo" style="width: 100%;">
                 <tr>
-                    <th>ID</th>
+                    <th>STUDENT ID</th>
                     <th>STUDENT NAME</th>
                     <th>MENTOR NAME</th>
                 </tr>
@@ -65,7 +65,7 @@
                 let studentfetch=await fetch("https://assign-mentor.herokuapp.com/students"); 
                 studentData=await studentfetch.json();
                 //studentData=JSON.stringify(studentData);
-                document.getElementById("data").innerHTML=studentData;
+                //document.getElementById("data").innerHTML=studentData;
                 for(let i=0;i<studentData.length;i++)
                 {
                     var row=document.createElement("tr");
